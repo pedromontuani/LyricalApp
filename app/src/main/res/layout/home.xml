@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".Home">
+
+
+    <!-- TAB BAR -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@android:drawable/ic_menu_edit" />
+
+        <Button
+            android:id="@+id/hSortByFeaturedButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/featured_butt"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tab_one"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tab_home"
+            android:backgroundTint="@color/main_color"
+            android:paddingTop="35dp"
+            android:text="Minicontos"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="8dp" />
+
+        <Button
+            android:id="@+id/tab_two"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/tab_likes"
+            android:backgroundTint="#888"
+            android:paddingTop="35dp"
+            android:text="Curtidas"
+            android:textAllCaps="false"
+            android:textColor="#888"
+            android:textSize="8dp" />
+
+        <Button
+            android:id="@+id/tab_three"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/tab_account"
+            android:backgroundTint="#888"
+            android:paddingTop="35dp"
+            android:text="Conta"
+            android:textAllCaps="false"
+            android:textColor="#888"
+            android:textSize="8dp" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/hSearchTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topBar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#888"
+        android:ems="10"
+        android:hint="Buscar história..."
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hSearchTxt"
+        android:layout_centerHorizontal="true"
+        android:text="arraste para baixo para atualizar"
+        android:textColor="#888"
+        android:textSize="8sp" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/hSearchTxt"
+        android:layout_marginTop="120dp">
+
+
+        <ListView
+            android:id="@+id/hStoriesListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp">
+
+        </ListView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/hWriteButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_above="@+id/tabBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/write_icon"
+        android:backgroundTint="@color/colorPrimaryDark" />
+
+
+</RelativeLayout>

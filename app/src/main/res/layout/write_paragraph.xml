@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteParagraph">
+
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Escrever Miniconto"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/wpBackButt"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="Cancelar"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/wpParagraphTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topBar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/main_color"
+        android:ems="10"
+        android:hint="escreva seu texto"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:maxLength="300"
+        android:textColor="#333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/wpRemainingCharactersTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/wpParagraphTxt"
+        android:layout_below="@+id/wpParagraphTxt"
+        android:text="300"
+        android:textSize="11sp"/>
+
+    <Button
+        android:id="@+id/wpSubmitParagraphButt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wpRemainingCharactersTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/main_color"
+        android:text="Enviar texto"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account">
+
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tab_one"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tab_home"
+            android:backgroundTint="#888"
+            android:paddingTop="35dp"
+            android:text="Minicontos"
+            android:textAllCaps="false"
+            android:textColor="#888"
+            android:textSize="8dp" />
+
+        <Button
+            android:id="@+id/tab_two"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/tab_likes"
+            android:backgroundTint="#888"
+            android:paddingTop="35dp"
+            android:text="Curtidas"
+            android:textAllCaps="false"
+            android:textColor="#888"
+            android:textSize="8dp" />
+
+        <Button
+            android:id="@+id/tab_three"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/tab_account"
+            android:backgroundTint="@color/main_color"
+            android:paddingTop="35dp"
+            android:text="Conta"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="8dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Conta"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/accLogoutButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logout_butt"/>
+
+        <Button
+            android:id="@+id/accWriteButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/write_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/accUsernameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="•••"
+        android:textColor="@color/main_color"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accUsernameTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="MEUS MINICONTOS"
+        android:textStyle="bold" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:layout_above="@+id/tabBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="136dp">
+
+        <ListView
+            android:id="@+id/accStoriesListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp">
+
+        </ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

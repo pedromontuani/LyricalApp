@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000">
+
+    <ImageView
+        android:id="@+id/csCoverImg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.4"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/csTitleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:text="•••"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/csCreatedByDateButt"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignEnd="@+id/csPreviewTxt"
+        android:layout_alignStart="@+id/csPreviewTxt"
+        android:layout_below="@+id/csTitleTxt"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:text="•••"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:id="@+id/csPreviewTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/csCreatedByDateButt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="3"
+        android:text="••••••"
+        android:textAlignment="textStart"
+        android:textColor="#fff"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignStart="@+id/csPreviewTxt"
+        android:layout_below="@+id/csPreviewTxt"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/write_icon"/>
+
+    <TextView
+        android:id="@+id/csParagraphsTxt"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView7"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_toEndOf="@+id/imageView7"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="#fff"
+        android:textSize="11sp"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@+id/csParagraphsTxt"
+        android:layout_toEndOf="@+id/csParagraphsTxt"
+        app:srcCompat="@drawable/liked_butt_white"/>
+
+    <TextView
+        android:id="@+id/csLikesTxt"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView8"
+        android:layout_alignTop="@+id/imageView8"
+        android:layout_toEndOf="@+id/imageView8"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="#fff"
+        android:textSize="11sp"/>
+
+    <ImageView
+        android:id="@+id/csFeaturedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/csCreatedByDateButt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/featured_icon"/>
+
+    <Button
+        android:id="@+id/csDeleteButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dismiss_butt"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

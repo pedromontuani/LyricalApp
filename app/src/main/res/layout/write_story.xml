@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteStory">
+
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Escrever miniconto"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/wsBackButt"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="Cancelar"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Título"
+                    android:textColor="#333"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/wsTitleTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView5"
+                    android:layout_below="@+id/textView5"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/main_color"
+                    android:ems="10"
+                    android:hint="insira o título"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:textColor="#333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/wsTitleTxt"
+                    android:layout_below="@+id/wsTitleTxt"
+                    android:layout_marginTop="20dp"
+                    android:text="Texto"
+                    android:textColor="#333"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/wsParagraphTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView6"
+                    android:layout_below="@+id/textView6"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/main_color"
+                    android:ems="10"
+                    android:hint="digite seu texto"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/wsCharacterCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/wsParagraphTxt"
+                    android:layout_below="@+id/wsParagraphTxt"
+                    android:text="300"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wsCharacterCount"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Imagem de capa"
+                    android:textColor="#333"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/wsCoverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_below="@+id/textView9"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/main_color"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/wsCoverImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="Toque para inserir a imagem de capa"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/wsSubmitButt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView10"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/main_color"
+                    android:text="Enviar miniconto"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryDetails">
+
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <Button
+            android:id="@+id/sdReportStoryButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/report_butt_white"/>
+
+        <Button
+            android:id="@+id/sdLikeStoryButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignTop="@+id/sdReportStoryButt"
+            android:layout_marginRight="5dp"
+            android:layout_toStartOf="@+id/sdReportStoryButt"
+            android:background="@drawable/like_butt_white"/>
+
+        <Button
+            android:id="@+id/sdBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_butt"/>
+
+        <Button
+            android:id="@+id/sdShareButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/sdLikeStoryButt"
+            android:background="@drawable/share_butt"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sdStoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topBar"
+        android:background="#000">
+
+        <ImageView
+            android:id="@+id/sdCoverImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:alpha="0.4"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/sdTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:text="•••"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/sdCreatedByDateButt"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignEnd="@+id/sdFirstParagraphTxt"
+            android:layout_alignStart="@+id/sdFirstParagraphTxt"
+            android:layout_below="@+id/sdTitleTxt"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:text="•••"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/sdFirstParagraphTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sdCreatedByDateButt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="••••••"
+            android:textAlignment="textStart"
+            android:textColor="#fff"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignStart="@+id/sdFirstParagraphTxt"
+            android:layout_below="@+id/sdFirstParagraphTxt"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/write_icon"/>
+
+        <TextView
+            android:id="@+id/sdParagraphsTxt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView5"
+            android:layout_alignTop="@+id/imageView5"
+            android:layout_toEndOf="@+id/imageView5"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="11sp"/>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@+id/sdParagraphsTxt"
+            android:layout_toEndOf="@+id/sdParagraphsTxt"
+            app:srcCompat="@drawable/liked_butt_white"/>
+
+        <TextView
+            android:id="@+id/sdLikesTxt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView6"
+            android:layout_alignTop="@+id/imageView6"
+            android:layout_toEndOf="@+id/imageView6"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="#fff"
+            android:textSize="11sp"/>
+
+        <ImageView
+            android:id="@+id/sdFeaturedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sdCreatedByDateButt"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/featured_icon"/>
+
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabBar"
+        android:layout_below="@+id/sdStoryLayout"
+        android:layout_marginBottom="10dp">
+
+        <ListView
+            android:id="@+id/sdParagraphsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sdStoryLayout"
+            android:divider="@drawable/divider"
+            android:dividerHeight="32dp">
+        </ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/sdWriteParagraphButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/write_butt"/>
+
+
+</RelativeLayout>
