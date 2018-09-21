@@ -45,6 +45,19 @@ public class Intro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro);
+        Button btnLogin = (Button) findViewById(R.id.inGetStartedButt);
+        Button btnCadas = (Button) findViewById(R.id.inGetStartedButt2);
+
+    }
+
+    public void LoginGo(){
+        Intent IniciateLogin = new Intent(Intro.this, Login.class);
+        startActivity(IniciateLogin);
+    }
+
+    public void Cadaster(){
+        setContentView(R.layout.sign_up);
+
     }
 
 
