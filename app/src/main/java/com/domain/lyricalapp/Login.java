@@ -30,6 +30,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private AlertDialog alerta;
     private Button buttonSair;
+    private Button esqueSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         final EditText email = (EditText) findViewById(R.id.usernameTxt);
         final EditText senha = (EditText) findViewById(R.id.passwordTxt);
+        esqueSenha = (Button) findViewById(R.id.forgotPassButt);
         Button btnLogar = (Button) findViewById(R.id.loginButt);
         Button btnCadastar = (Button) findViewById(R.id.signUpButt);
 
@@ -63,7 +65,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 startActivity(abreCadastro);
             }
         });
-
+        esqueSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ass = new Intent(Login.this,localtroca.class);
+                startActivity(ass);
+            }
+        });
         btnLogar.setOnClickListener(this);
     }
     @Override
@@ -91,11 +99,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    startActivity(new Intent(Login.this,Feed.class));
+                    startActivity(new Intent(Login.this,Home.class));
                     finish();
                 }else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                    AlertDialog alertDialog;
                     builder.setMessage("Usuario não encontrado");
                     builder.setTitle("Erro");
 
@@ -106,8 +113,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         }
                     });
 
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
+                    alerta = builder.create();
+                    alerta.show();
                 }
             }
         });

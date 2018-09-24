@@ -48,17 +48,22 @@ public class Intro extends AppCompatActivity {
         Button btnLogin = (Button) findViewById(R.id.inGetStartedButt);
         Button btnCadas = (Button) findViewById(R.id.inGetStartedButt2);
 
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intro.this,Login.class);
+                startActivity(i);
+            }
+        });
+
+        btnCadas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent z = new Intent(Intro.this,SignUp.class);
+                startActivity(z);
+            }
+        });
+
     }
-
-    public void LoginGo(){
-        Intent IniciateLogin = new Intent(Intro.this, Login.class);
-        startActivity(IniciateLogin);
-    }
-
-    public void Cadaster(){
-        setContentView(R.layout.sign_up);
-
-    }
-
 
 }// @end
